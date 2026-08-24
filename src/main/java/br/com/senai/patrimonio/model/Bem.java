@@ -1,12 +1,17 @@
 package br.com.senai.patrimonio.model;
 
+import br.com.senai.patrimonio.service.ServiceTest;
 import org.hibernate.bytecode.spi.BytecodeEnhancementMetadata;
+import org.springframework.stereotype.Service;
 
 public class Bem {
     private Long id;
     private String nome;
     private String codigo;
     private Empresa empresa;
+
+    ServiceTest serviceTest;
+
 
     public Bem(){};
 
