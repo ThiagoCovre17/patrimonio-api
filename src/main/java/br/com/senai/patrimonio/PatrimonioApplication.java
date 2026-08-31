@@ -1,8 +1,7 @@
 package br.com.senai.patrimonio;
 
-import br.com.senai.patrimonio.model.Empresa;
-import br.com.senai.patrimonio.model.Endereco;
-import br.com.senai.patrimonio.model.Pessoa;
+import br.com.senai.patrimonio.model.*;
+import br.com.senai.patrimonio.model.enums.Cargo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -35,6 +34,17 @@ public class PatrimonioApplication {
 
 
 	Pessoa pessoa=new Pessoa( );
+	Sala sala =new Sala();
+
+		Funcionario funcionario=new Funcionario(
+
+				35L , "Thiago", "123456",
+				Cargo.GERENTE,empresa,sala
+		);
+
+		System.out.println(funcionario.getCpf());
+
+
 
 
 	}
