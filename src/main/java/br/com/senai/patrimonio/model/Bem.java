@@ -4,7 +4,7 @@ import br.com.senai.patrimonio.service.ServiceTest;
 import org.hibernate.bytecode.spi.BytecodeEnhancementMetadata;
 import org.springframework.stereotype.Service;
 
-public class Bem {
+public class Bem implements BuscarEmpresaVinculada {
     private Long id;
     private String nome;
     private String codigo;
@@ -52,5 +52,10 @@ public class Bem {
 
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
+    }
+
+    @Override
+    public String getEmpresaVinculada() {
+        return empresa != null ? "Empresa:" + empresa.getNome() : "Empresa não informada";
     }
 }

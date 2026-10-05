@@ -2,12 +2,13 @@ package br.com.senai.patrimonio.model;
 
 import jakarta.persistence.Embedded;
 
-public class Bloco {
+public class Bloco implements BuscarEmpresaVinculada {
 
     private Long id;
     private String nome;
     private Empresa empresa;
 
+    public Bloco(){}
 
 
     public Bloco(Long id, String nome, Empresa empresa) {
@@ -39,4 +40,10 @@ public class Bloco {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+
+    @Override
+    public String getEmpresaVinculada() {
+       return empresa!=  null? "Empresa:" + empresa.getNome(): "Empresa não informada";
+    }
 }
+
