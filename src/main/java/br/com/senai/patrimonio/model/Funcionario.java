@@ -71,5 +71,7 @@ public class Funcionario extends Pessoa implements Localizavel, BuscarEmpresaVin
     public String getIdentificacao(){
         return super.getIdentificacao() + " - " + cargo;
     }
+
+
 }
 
